@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mastering Contract Drafting & Freelancing — Lawctopus Law School</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy: #0e1b35;
+  --gold: #b8820f;
+  --gold-warm: #d4971a;
+  --cream: #f8f4ee;
+  --cream-dark: #efe9df;
+  --ink: #1a1a18;
+  --ink-soft: #4a4843;
+  --ink-muted: #8a8680;
+  --rule: #ddd8cf;
+  --white: #ffffff;
+  --red-soft: #c0392b;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ── NAV ── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 32px; height: 58px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.nav-logo {
+  font-family: 'Lora', serif;
+  font-size: 17px; font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.01em;
+}
+.nav-pill {
+  background: var(--gold-warm);
+  color: #fff;
+  font-size: 13px; font-weight: 500;
+  padding: 7px 18px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.nav-pill:hover { opacity: 0.88; }
+
+/* ── HERO ── */
+.hero {
+  background: var(--navy);
+  padding: 64px 32px 0;
+  overflow: hidden;
+}
+.hero-inner { max-width: 900px; margin: 0 auto; }
+
+.hero-eyebrow {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--gold-warm);
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 1px;
+  background: var(--gold-warm);
+}
+
+.hero h1 {
+  font-family: 'Lora', serif;
+  font-size: clamp(36px, 5.5vw, 60px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+  max-width: 760px;
+}
+.hero h1 .aside {
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(255,255,255,0.5);
+  display: block;
+  font-size: 0.78em;
+  line-height: 1.4;
+  margin-top: 12px;
+  letter-spacing: 0;
+}
+
+.hero-body {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 48px;
+  align-items: end;
+  padding-bottom: 52px;
+}
+@media (max-width: 680px) {
+  .hero-body { grid-template-columns: 1fr; }
+}
+
+.hero-copy p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 36px;
+}
+
+.hero-cta-group { display: flex; flex-direction: column; gap: 12px; }
+.btn-enroll {
+  display: inline-block;
+  background: var(--gold-warm);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 3px;
+  font-size: 16px; font-weight: 500;
+  text-decoration: none;
+  width: fit-content;
+  transition: opacity 0.15s;
+}
+.btn-enroll:hover { opacity: 0.88; }
+.hero-deadline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.38);
+}
+.hero-deadline strong { color: #f87171; font-weight: 500; }
+
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 26px;
+  align-self: end;
+}
+.hero-card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  font-size: 14px;
+}
+.hero-card-row:last-child { border-bottom: none; }
+.hero-card-row span:first-child { color: rgba(255,255,255,0.45); }
+.hero-card-row span:last-child { color: rgba(255,255,255,0.88); font-weight: 500; }
+.hero-card-row .gold { color: var(--gold-warm); font-weight: 600; font-size: 15px; }
+
+/* ── DIVIDER ── */
+.ink-rule {
+  height: 1px;
+  background: var(--rule);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── SECTION WRAPPER ── */
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+section { padding: 72px 32px; }
+section.tight { padding: 52px 32px; }
+
+/* ── THE HONEST PITCH ── */
+.pitch {
+  background: var(--cream);
+}
+.pitch-inner {
+  max-width: 900px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+@media (max-width: 680px) { .pitch-inner { grid-template-columns: 1fr; gap: 40px; } }
+
+.pitch-left {}
+.label-tag {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+  display: block;
+}
+.pitch-left h2 {
+  font-family: 'Lora', serif;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 22px;
+}
+.pitch-left p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  line-height: 1.72;
+  margin-bottom: 18px;
+}
+.pitch-left p + p { margin-top: 0; }
+
+.pitch-right {}
+.pitch-pull {
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--navy);
+  line-height: 1.55;
+  padding-left: 22px;
+  border-left: 3px solid var(--gold-warm);
+  margin-bottom: 32px;
+}
+.pitch-checklist { list-style: none; }
+.pitch-checklist li {
+  font-size: 15px;
+  color: var(--ink-soft);
+  padding: 11px 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.5;
+}
+.pitch-checklist li:last-child { border-bottom: none; }
+.pitch-checklist li::before {
+  content: '→';
+  color: var(--gold-warm);
+  flex-shrink: 0;
+  margin-top: 1px;
+  font-weight: 600;
+}
+
+/* ── CURRICULUM: ZIG-ZAG ── */
+.curriculum { background: var(--white); }
+.curriculum-head { max-width: 900px; margin: 0 auto; margin-bottom: 56px; }
+.curriculum-head h2 {
+  font-family: 'Lora', serif;
+  font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+.curriculum-head p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 560px;
+  line-height: 1.65;
+}
+
+.zigzag { max-width: 900px; margin: 0 auto; }
+.zz-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  align-items: stretch;
+}
+.zz-item:last-child { border-bottom: 1px solid var(--rule); }
+@media (max-width: 640px) { .zz-item { grid-template-columns: 1fr; } }
+
+.zz-visual {
+  background: var(--navy);
+  padding: 36px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 200px;
+}
+.zz-visual::before {
+  content: '';
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 28px,
+    rgba(255,255,255,0.02) 28px,
+    rgba(255,255,255,0.02) 29px
+  );
+}
+.zz-item:nth-child(even) .zz-visual { order: 2; }
+@media (max-width: 640px) { .zz-item:nth-child(even) .zz-visual { order: 0; } }
+
+.zz-month {
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--gold-warm);
+  margin-bottom: 8px;
+  position: relative;
+}
+.zz-visual h3 {
+  font-family: 'Lora', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.25;
+  position: relative;
+}
+
+.zz-text {
+  padding: 36px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--cream);
+}
+.zz-text p {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+.contract-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cpill {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--navy);
+  background: var(--cream-dark);
+  border: 1px solid var(--rule);
+  padding: 3px 10px;
+  border-radius: 2px;
+}
+
+/* ── TESTIMONIALS: MESSY AND REAL ── */
+.proof { background: var(--cream); padding: 72px 32px; }
+.proof-head { max-width: 900px; margin: 0 auto 48px; }
+.proof-head h2 {
+  font-family: 'Lora', serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 12px;
+}
+
+.proof-layout {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  grid-template-rows: auto auto;
+  gap: 20px;
+}
+@media (max-width: 640px) { .proof-layout { grid-template-columns: 1fr; } }
+
+.tcard {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 28px 30px;
+}
+.tcard.big { grid-row: span 2; padding: 36px; }
+
+.tcard blockquote {
+  font-family: 'Lora', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--ink);
+  line-height: 1.68;
+  margin-bottom: 20px;
+}
+.tcard.big blockquote { font-size: 18px; }
+.tcard.small blockquote { font-size: 15px; }
+
+.tcard-who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--rule);
+  padding-top: 16px;
+}
+.tcard-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: rgba(255,255,255,0.8);
+  font-family: 'Lora', serif;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.tcard-name { font-size: 14px; font-weight: 500; color: var(--ink); }
+.tcard-role { font-size: 12px; color: var(--ink-muted); }
+.tcard-stars { font-size: 12px; color: var(--gold-warm); margin-bottom: 2px; }
+
+/* ── FACULTY ── */
+.faculty { background: var(--white); padding: 72px 32px; }
+.faculty-head { max-width: 900px; margin: 0 auto 44px; }
+.faculty-head h2 {
+  font-family: 'Lora', serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 12px;
+}
+.faculty-head p { font-size: 16px; color: var(--ink-soft); line-height: 1.65; max-width: 520px; }
+
+.faculty-list { max-width: 900px; margin: 0 auto; }
+.faculty-row {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+  padding: 28px 0;
+  align-items: start;
+}
+.faculty-row:last-child { border-bottom: 1px solid var(--rule); }
+@media (max-width: 600px) { .faculty-row { grid-template-columns: 1fr; gap: 12px; } }
+
+.faculty-name-col {}
+.faculty-name {
+  font-family: 'Lora', serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 3px;
+}
+.faculty-role-tag {
+  font-size: 12px;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.faculty-bio { font-size: 15px; color: var(--ink-soft); line-height: 1.65; }
+
+/* ── AI SECTION ── */
+.ai-band {
+  background: var(--navy);
+  padding: 60px 32px;
+}
+.ai-inner { max-width: 900px; margin: 0 auto; }
+.ai-inner .label-tag { color: var(--gold-warm); }
+.ai-inner h2 {
+  font-family: 'Lora', serif;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 700;
+  color: #fff;
+  margin: 12px 0 40px;
+  max-width: 540px;
+}
+
+.ai-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+@media (max-width: 580px) { .ai-row { grid-template-columns: 1fr; } }
+
+.ai-cell {
+  background: var(--navy);
+  padding: 28px 28px;
+}
+.ai-cell h3 {
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 8px;
+}
+.ai-cell p { font-size: 14px; color: rgba(255,255,255,0.48); line-height: 1.62; }
+
+/* ── PRICING ── */
+.pricing { background: var(--cream); padding: 72px 32px; }
+.pricing-inner { max-width: 900px; margin: 0 auto; }
+.pricing-inner h2 {
+  font-family: 'Lora', serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--navy);
+  margin: 12px 0 8px;
+}
+.pricing-inner > p { font-size: 16px; color: var(--ink-soft); margin-bottom: 44px; }
+
+.pricing-compare {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 0;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  overflow: hidden;
+}
+@media (max-width: 600px) { .pricing-compare { grid-template-columns: 1fr; } }
+
+.pc-col { padding: 36px; }
+.pc-col.featured {
+  background: var(--navy);
+  position: relative;
+}
+.pc-badge {
+  display: inline-block;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  background: var(--gold-warm);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+.pc-plan {
+  font-family: 'Lora', serif;
+  font-size: 22px; font-weight: 700;
+  margin-bottom: 6px;
+}
+.pc-col:not(.featured) .pc-plan { color: var(--navy); }
+.pc-col.featured .pc-plan { color: #fff; }
+
+.pc-duration { font-size: 13px; color: var(--ink-muted); margin-bottom: 28px; }
+.pc-col.featured .pc-duration { color: rgba(255,255,255,0.45); }
+
+.pc-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.pc-original { font-size: 15px; text-decoration: line-through; color: var(--ink-muted); }
+.pc-col.featured .pc-original { color: rgba(255,255,255,0.3); }
+.pc-now { font-family: 'Lora', serif; font-size: 34px; font-weight: 700; }
+.pc-col:not(.featured) .pc-now { color: var(--navy); }
+.pc-col.featured .pc-now { color: var(--gold-warm); }
+
+.pc-saving {
+  font-size: 13px;
+  margin-bottom: 28px;
+}
+.pc-col:not(.featured) .pc-saving { color: #1a6b3c; }
+.pc-col.featured .pc-saving { color: rgba(255,255,255,0.55); }
+
+.pc-list { list-style: none; margin-bottom: 28px; }
+.pc-list li {
+  font-size: 14px;
+  padding: 7px 0;
+  border-bottom: 1px solid;
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  line-height: 1.5;
+}
+.pc-col:not(.featured) .pc-list li {
+  color: var(--ink-soft);
+  border-color: var(--rule);
+}
+.pc-col.featured .pc-list li {
+  color: rgba(255,255,255,0.72);
+  border-color: rgba(255,255,255,0.08);
+}
+.pc-list li:last-child { border-bottom: none; }
+.pc-list li::before { content: '✓'; flex-shrink: 0; margin-top: 2px; }
+.pc-col:not(.featured) .pc-list li::before { color: #1a6b3c; font-weight: 700; }
+.pc-col.featured .pc-list li::before { color: var(--gold-warm); font-weight: 700; }
+
+.pc-cta {
+  display: block;
+  text-align: center;
+  padding: 13px 24px;
+  border-radius: 3px;
+  font-size: 15px; font-weight: 500;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.pc-cta:hover { opacity: 0.85; }
+.pc-col:not(.featured) .pc-cta {
+  border: 1.5px solid var(--rule);
+  color: var(--navy);
+}
+.pc-col:not(.featured) .pc-cta:hover { background: var(--cream-dark); }
+.pc-col.featured .pc-cta {
+  background: var(--gold-warm);
+  color: #fff;
+  border: none;
+}
+
+/* ── GUARANTEE ── */
+.guarantee-strip {
+  background: var(--white);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 44px 32px;
+}
+.gs-inner {
+  max-width: 900px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 560px) { .gs-inner { grid-template-columns: 1fr; } }
+
+.gs-icon {
+  font-size: 40px;
+  line-height: 1;
+  margin-top: 4px;
+}
+.gs-text h3 {
+  font-family: 'Lora', serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+.gs-text p { font-size: 15px; color: var(--ink-soft); line-height: 1.7; }
+.gs-text p + p { margin-top: 10px; }
+
+/* ── FINAL CTA ── */
+.final {
+  background: var(--navy);
+  padding: 80px 32px;
+  text-align: center;
+}
+.final-inner { max-width: 580px; margin: 0 auto; }
+.final h2 {
+  font-family: 'Lora', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+.final p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  margin-bottom: 36px;
+}
+.final .btn-enroll { font-size: 17px; padding: 16px 36px; }
+.final-note {
+  margin-top: 18px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.3);
+}
+.final-note strong { color: #f87171; font-weight: 500; }
+
+/* ── FOOTER ── */
+footer {
+  background: #080f1e;
+  padding: 30px 32px;
+  text-align: center;
+}
+footer p { font-size: 13px; color: rgba(255,255,255,0.28); line-height: 1.8; }
+footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+footer a:hover { color: var(--gold-warm); }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Lawctopus Law School</div>
+  <a href="#pricing" class="nav-pill">Enroll by June 30 →</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">6-Month Live Program · Cohort opens July 1</div>
+    <h1>
+      Draft contracts like a senior lawyer.
+      Get paid for it on the side.
+      <span class="aside">Most lawyers take 4 years to reach this level. This course gets you there in 6 months — and helps you start billing clients before you graduate.</span>
+    </h1>
+    <div class="hero-body">
+      <div class="hero-copy">
+        <p>54 live sessions. 24+ agreements. Personalised feedback on every draft you submit. Plus a full freelancing track — Upwork profile, real opportunities, the whole thing — so your new skills start earning from day one.</p>
+        <div class="hero-cta-group">
+          <a href="#pricing" class="btn-enroll">Enroll — ₹24,999</a>
+          <span class="hero-deadline">Registration closes <strong>June 30</strong>. No extensions.</span>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-row">
+          <span>Duration</span><span>6 months live</span>
+        </div>
+        <div class="hero-card-row">
+          <span>Live sessions</span><span>54 sessions</span>
+        </div>
+        <div class="hero-card-row">
+          <span>Contracts covered</span><span>24 agreements</span>
+        </div>
+        <div class="hero-card-row">
+          <span>Assignments reviewed</span><span>10 with feedback</span>
+        </div>
+        <div class="hero-card-row">
+          <span>Alumni rating</span><span class="gold">93.2 / 100</span>
+        </div>
+        <div class="hero-card-row">
+          <span>Price</span><span class="gold">₹24,999 (was ₹60,000)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HONEST PITCH -->
+<section class="pitch">
+  <div class="pitch-inner">
+    <div class="pitch-left">
+      <span class="label-tag">Who this is for</span>
+      <h2>Most contract drafting courses teach you what a contract looks like. This one teaches you how to actually draft one — under pressure, for a real client.</h2>
+      <p>There's a difference between reading a sale deed and knowing how to draft one when a client is waiting. Law schools teach theory. Law firms teach you on the job, slowly, over years. This course skips the waiting.</p>
+      <p>You'll draft real agreements — not fill in blanks — and get line-by-line feedback from lawyers who negotiate these documents for a living. The freelancing track isn't a bonus module tacked on at the end; it's woven through the entire six months so you're building your profile and your portfolio at the same time.</p>
+      <p>If you want a certificate to hang on your wall, this isn't the right course. If you want to actually earn money drafting contracts within six months, keep reading.</p>
+    </div>
+    <div class="pitch-right">
+      <p class="pitch-pull">"What a lawyer learns after 3–4 years of practice, you'll have learned in 6 months. And you'll have the Upwork profile to prove it."</p>
+      <ul class="pitch-checklist">
+        <li>Law students who want to stand out at internships and walk in already knowing how to draft</li>
+        <li>Lawyers in their first 4 years who feel shaky on complex agreements and want to fix that fast</li>
+        <li>Anyone who wants to build a side income from contract review — not someday, but this year</li>
+        <li>Professionals (CAs, business owners) who keep paying lawyers for documents they could draft themselves</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM: ZIG-ZAG -->
+<section class="curriculum" style="padding: 72px 32px;">
+  <div class="curriculum-head">
+    <span class="label-tag">Month by month</span>
+    <h2>What you'll actually do</h2>
+    <p>Every month is built around live drafting sessions, not just lectures. You watch, you try, you get feedback. By month six, you'll have drafted 24 agreements from scratch.</p>
+  </div>
+  <div class="zigzag">
+
+    <div class="zz-item">
+      <div class="zz-visual">
+        <div class="zz-month">Month 1</div>
+        <h3>Anatomy of a contract</h3>
+      </div>
+      <div class="zz-text">
+        <p>Before you draft anything, you need to understand why every clause exists. You'll tear apart real contracts — finding the weaknesses, understanding what the definitions clause actually does, learning why a force majeure clause that sounds fine can fail you in court.</p>
+        <div class="contract-pills">
+          <span class="cpill">Definitions clause</span>
+          <span class="cpill">Indemnity</span>
+          <span class="cpill">Termination</span>
+          <span class="cpill">Boilerplate</span>
+          <span class="cpill">Conditions precedent</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="zz-item">
+      <div class="zz-visual">
+        <div class="zz-month">Month 2</div>
+        <h3>Execution & your first freelance client</h3>
+      </div>
+      <div class="zz-text">
+        <p>Stamp duty, registration, witness requirements — the unglamorous stuff that voids contracts when you get it wrong. You'll also draft your first NDA and employment agreement, then run through a live negotiation exercise. First freelancing session: setting up your Upwork profile.</p>
+        <div class="contract-pills">
+          <span class="cpill">NDA</span>
+          <span class="cpill">Employment agreement</span>
+          <span class="cpill">Software licensing</span>
+          <span class="cpill">Upwork profile</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="zz-item">
+      <div class="zz-visual">
+        <div class="zz-month">Month 3</div>
+        <h3>International contracts</h3>
+      </div>
+      <div class="zz-text">
+        <p>Governing law. Jurisdiction clauses. Arbitration rules. Cross-border contracts involve choices that can completely change how a dispute plays out — and most junior lawyers are guessing when they draft them. You won't be. Plus: loan agreements and advanced negotiation sessions.</p>
+        <div class="contract-pills">
+          <span class="cpill">International contracts</span>
+          <span class="cpill">Loan agreement</span>
+          <span class="cpill">E-contracts</span>
+          <span class="cpill">Governing law</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="zz-item">
+      <div class="zz-visual">
+        <div class="zz-month">Month 4</div>
+        <h3>IP & the internet</h3>
+      </div>
+      <div class="zz-text">
+        <p>Trademark licensing, patent licensing, copyright assignments, SaaS agreements, website terms and conditions, privacy policies, return & refund policies. Digital businesses need these constantly — and most lawyers don't know how to draft them well. You will.</p>
+        <div class="contract-pills">
+          <span class="cpill">Trademark licensing</span>
+          <span class="cpill">Copyright assignment</span>
+          <span class="cpill">SaaS agreement</span>
+          <span class="cpill">Privacy policy</span>
+          <span class="cpill">T&Cs</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="zz-item">
+      <div class="zz-visual">
+        <div class="zz-month">Month 5</div>
+        <h3>Real estate agreements</h3>
+      </div>
+      <div class="zz-text">
+        <p>Sale deeds. Leave and license agreements. Power of attorney. Franchisee agreements. Real estate work is bread and butter for a lot of lawyers — and a great source of freelance work. You'll draft each one live with the faculty and get feedback on your own version.</p>
+        <div class="contract-pills">
+          <span class="cpill">Sale deed</span>
+          <span class="cpill">Leave & license</span>
+          <span class="cpill">Power of attorney</span>
+          <span class="cpill">Franchisee agreement</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="zz-item">
+      <div class="zz-visual">
+        <div class="zz-month">Month 6</div>
+        <h3>Corporate deals & career launch</h3>
+      </div>
+      <div class="zz-text">
+        <p>Shareholders agreements. Share purchase agreements. JVA. Partnership deeds. The documents that show up on the most complex and highest-paying deals. By now you'll have a portfolio, an Upwork profile, and a career coaching session with LLS faculty. You graduate ready to earn.</p>
+        <div class="contract-pills">
+          <span class="cpill">Shareholders agreement</span>
+          <span class="cpill">Share purchase</span>
+          <span class="cpill">Joint venture</span>
+          <span class="cpill">Partnership deed</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="proof">
+  <div class="proof-head">
+    <span class="label-tag">From past learners</span>
+    <h2>Rated 93.2/100 across 1,000+ reviews.<br>Here's what three of them actually said.</h2>
+  </div>
+  <div class="proof-layout">
+    <div class="tcard big">
+      <div class="tcard-stars">★★★★★</div>
+      <blockquote>"I was two years into practice and still terrified every time a client sent me a shareholders agreement. I'd been copying clauses from precedents without really understanding what I was doing. Month three of this course was when it clicked — the faculty walked through exactly why each clause is negotiated the way it is. I felt, maybe for the first time, like I actually knew what I was doing. I've since reviewed three JVAs for clients I found on Upwork."</blockquote>
+      <div class="tcard-who">
+        <div class="tcard-avatar">RN</div>
+        <div>
+          <div class="tcard-name">Radhika N.</div>
+          <div class="tcard-role">Junior associate, Delhi · 2023 batch</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard small">
+      <div class="tcard-stars">★★★★★</div>
+      <blockquote>"The Upwork part is real. They gave me actual opportunities to apply to. I landed my first client in month four and have been billing consistently since. It's not a guarantee but it's a real shot if you put the work in."</blockquote>
+      <div class="tcard-who">
+        <div class="tcard-avatar">AK</div>
+        <div>
+          <div class="tcard-name">Aditya K.</div>
+          <div class="tcard-role">Final year, NLSIU</div>
+        </div>
+      </div>
+    </div>
+    <div class="tcard small">
+      <div class="tcard-stars">★★★★</div>
+      <blockquote>"Honestly I expected it to be mostly recorded lectures I'd forget about. The live sessions are the thing — you can't just zone out when the faculty asks you to redraft that clause on the spot."</blockquote>
+      <div class="tcard-who">
+        <div class="tcard-avatar">PV</div>
+        <div>
+          <div class="tcard-name">Priya V.</div>
+          <div class="tcard-role">CA, Pune · non-lawyer learner</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section class="faculty">
+  <div class="faculty-head">
+    <span class="label-tag">Your faculty</span>
+    <h2>Eight practicing lawyers. No one teaches what they don't do.</h2>
+    <p>The faculty includes partners from Khaitan & Co., associates from Trilegal and Shardul Amarchand Mangaldas, in-house counsels, and a top-rated Upwork freelancer who runs the entire freelancing track.</p>
+  </div>
+  <div class="faculty-list">
+    <div class="faculty-row">
+      <div class="faculty-name-col">
+        <div class="faculty-name">Akanksha Mishra</div>
+        <div class="faculty-role-tag">Head of LLS · Bombay HC</div>
+      </div>
+      <div class="faculty-bio">Litigator at Bombay High Court, Nagpur Bench. Former corporate counsel to startups, media companies, and PSUs including BHEL and MyCaptain. Has taught contract drafting to 1,500+ learners with a 96.5/100 rating. Runs the core curriculum.</div>
+    </div>
+    <div class="faculty-row">
+      <div class="faculty-name-col">
+        <div class="faculty-name">Pranjal Doshi</div>
+        <div class="faculty-role-tag">Walker Morris LLP, UK</div>
+      </div>
+      <div class="faculty-bio">LLM from Cambridge. Previously at Trilegal and Khaitan & Co. Now an associate at Walker Morris in the UK. Specialises in M&A, private equity, and investment documentation — the shareholders agreements and share purchase deals that show up on the biggest transactions.</div>
+    </div>
+    <div class="faculty-row">
+      <div class="faculty-name-col">
+        <div class="faculty-name">Arunima Jha</div>
+        <div class="faculty-role-tag">Head Legal, Omnicom Media Group</div>
+      </div>
+      <div class="faculty-bio">Former Legal Counsel at BookMyShow and K Raheja Corp. Expert in media law, privacy law, and technology agreements. Handles Month 4's IP and website sessions — the digital contracts that most lawyers are frankly guessing through.</div>
+    </div>
+    <div class="faculty-row">
+      <div class="faculty-name-col">
+        <div class="faculty-name">Shashank Sardesai</div>
+        <div class="faculty-role-tag">Co-founder, EverTrust Legal</div>
+      </div>
+      <div class="faculty-bio">Previously at Wadia Ghandy, HSA Advocates, and Khaitan Legal Associates. Now runs EverTrust Legal. Deep experience in real estate agreements, commercial contracts, and partnership structures — the kind of drafting that fills most lawyers' actual practice.</div>
+    </div>
+    <div class="faculty-row">
+      <div class="faculty-name-col">
+        <div class="faculty-name">Anup Menon V</div>
+        <div class="faculty-role-tag">Top-rated Upwork freelancer</div>
+      </div>
+      <div class="faculty-bio">Senior Legal Counsel at C. Mohanram & Associates and, separately, a top-rated Upwork freelancer. Runs the freelancing track — not theory about how freelancing works, but exactly how he built his profile, writes proposals, and finds clients. He shares actual live opportunities with learners.</div>
+    </div>
+    <div class="faculty-row">
+      <div class="faculty-name-col">
+        <div class="faculty-name">Tanuj Kalia</div>
+        <div class="faculty-role-tag">Founding CEO, Lawctopus</div>
+      </div>
+      <div class="faculty-bio">NUJS graduate, author of 'Law as a Career' (LexisNexis), TEDx speaker, and BW Legal 40 Under 40 winner. Leads the negotiation modules — from salary talks to M&A deal rooms. As an MSME owner he's personally negotiated deals from a few lakhs to several crores.</div>
+    </div>
+  </div>
+</section>
+
+<!-- AI BAND -->
+<div class="ai-band">
+  <div class="ai-inner">
+    <span class="label-tag">Built into the course</span>
+    <h2>AI tools for legal work — practiced, not just explained</h2>
+    <div class="ai-row">
+      <div class="ai-cell">
+        <h3>Live sessions with Indian Kanoon & Jurisphere</h3>
+        <p>60–90 minute sessions every month or two, showing you how to use AI in actual legal research, drafting, and litigation prep — not demos, real workflows.</p>
+      </div>
+      <div class="ai-cell">
+        <h3>1-month free access to Prism</h3>
+        <p>Indian Kanoon's AI tool, given to every learner. Practice faster legal research on India's largest caselaw database while you're still in the course.</p>
+      </div>
+      <div class="ai-cell">
+        <h3>4-hour recorded AI workshop</h3>
+        <p>Four sessions covering AI for legal research, argumentation, contract drafting, and the ethics behind it. Recorded by legal product developers at Indian Kanoon.</p>
+      </div>
+      <div class="ai-cell">
+        <h3>31-page AI prompts library</h3>
+        <p>Subject-wise prompts built specifically for law students and lawyers — contract drafting, research, litigation, IPR, corporate law, and legal careers.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="pricing-inner">
+    <span class="label-tag">Pricing</span>
+    <h2>Two courses. One decision.</h2>
+    <p>Both include a full money-back guarantee and lifetime access to all recordings and materials.</p>
+    <div class="pricing-compare">
+      <div class="pc-col">
+        <div class="pc-plan">Foundation</div>
+        <div class="pc-duration">2-month online certificate</div>
+        <div class="pc-price-row">
+          <span class="pc-now">₹7,999</span>
+        </div>
+        <div class="pc-saving">One-time payment</div>
+        <ul class="pc-list">
+          <li>8 live sessions</li>
+          <li>Contract drafting fundamentals</li>
+          <li>Basic negotiation module</li>
+          <li>2 assignments with feedback</li>
+          <li>202 pages of reading material</li>
+          <li>Money-back guarantee</li>
+        </ul>
+        <a href="https://www.lawctopuslawschool.com" target="_blank" class="pc-cta">Enroll in Foundation</a>
+      </div>
+      <div class="pc-col featured">
+        <div class="pc-badge">Recommended</div>
+        <div class="pc-plan">Expert + Freelancer</div>
+        <div class="pc-duration">6-month expert-level program</div>
+        <div class="pc-price-row">
+          <span class="pc-original">₹60,000</span>
+          <span class="pc-now">₹24,999</span>
+        </div>
+        <div class="pc-saving">You save ₹35,001 — early cohort pricing</div>
+        <ul class="pc-list">
+          <li>54 live sessions across 6 months</li>
+          <li>24+ agreements drafted & reviewed</li>
+          <li>10 assignments with personal feedback</li>
+          <li>4 freelancing sessions (Upwork, Fiverr, LinkedIn)</li>
+          <li>Real Upwork opportunities shared directly</li>
+          <li>800+ pages of reading material</li>
+          <li>32 hours of recorded lectures</li>
+          <li>AI tools: Prism access + workshop + prompts eBook</li>
+          <li>CV, cover letter & LinkedIn coaching</li>
+          <li>1-on-1 career coaching (bi-monthly)</li>
+          <li>Lifetime access to everything</li>
+          <li>Money-back guarantee</li>
+        </ul>
+        <a href="https://www.lawctopuslawschool.com" target="_blank" class="pc-cta">Enroll Now — Register by June 30</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<div class="guarantee-strip">
+  <div class="gs-inner">
+    <div class="gs-icon">🛡️</div>
+    <div class="gs-text">
+      <h3>The money-back guarantee is real</h3>
+      <p>Attend at least 66% of live classes (camera on). Submit all assignments and pass them. If you do those things and still feel the course didn't add value to your career, email <a href="mailto:support@lawctopus.com">support@lawctopus.com</a> within 10 days of the final session. Full refund. No questions.</p>
+      <p>The condition isn't a loophole. It's designed to make sure you actually do the work — because the course only works if you do.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<div class="final">
+  <div class="final-inner">
+    <h2>The next cohort starts July 1. Registration closes June 30.</h2>
+    <p>This is the only way to join this cohort. There's no waitlist for the next one and no guarantee the pricing stays the same.</p>
+    <a href="https://www.lawctopuslawschool.com" target="_blank" class="btn-enroll">Enroll Now — ₹24,999</a>
+    <p class="final-note">Closes <strong>June 30</strong> · Questions? <a href="mailto:courses@lawctopus.com" style="color:rgba(255,255,255,0.4)">courses@lawctopus.com</a> · Reply within 24 hours</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    Lawctopus Law School · <a href="https://www.lawctopus.com" target="_blank">lawctopus.com</a><br>
+    Over 20,000 law students and practitioners trained since founding.
+  </p>
+</footer>
+
+</body>
+</html>
